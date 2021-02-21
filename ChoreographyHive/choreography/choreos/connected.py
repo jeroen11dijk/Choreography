@@ -6,7 +6,7 @@ from rlbot.utils.structures.game_interface import GameInterface
 from rlutilities.linear_algebra import vec2, vec3, euler_to_rotation, rotation, dot, normalize, norm, xy, \
     axis_to_rotation
 
-from choreography.choreography import Choreography
+from choreography.choreography_main import Choreography
 from choreography.drone import Drone
 from choreography.group_step import PerDroneStep, TwoTickStateSetStep
 from .examples import YeetTheBallOutOfTheUniverse, Wait

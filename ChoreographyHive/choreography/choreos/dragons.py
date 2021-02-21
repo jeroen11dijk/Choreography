@@ -6,7 +6,7 @@ from rlbot.utils.structures.game_data_struct import GameTickPacket
 from rlutilities.linear_algebra import vec3, dot, look_at, axis_to_rotation, cross
 from rlutilities.simulation import Ball, Input, Curve
 
-from choreography.choreography import Choreography
+from choreography.choreography_main import Choreography
 from choreography.drone import Drone
 from choreography.group_step import BlindBehaviorStep, StateSettingStep, ParallelStep, DroneListStep
 from choreography.paths.dragon_paths import BLUE_DRAGON_PATH, PURPLE_DRAGON_PATH

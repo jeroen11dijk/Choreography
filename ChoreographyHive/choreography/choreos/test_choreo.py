@@ -10,7 +10,7 @@ from rlutilities.linear_algebra import vec3, rotation, dot, vec2, look_at, mat3,
     xy, axis_to_rotation, euler_to_rotation
 from rlutilities.simulation import Input
 
-from choreography.choreography import Choreography
+from choreography.choreography_main import Choreography
 from choreography.drone import Drone
 from choreography.group_step import BlindBehaviorStep, DroneListStep, PerDroneStep, \
     StateSettingStep, TwoTickStateSetStep

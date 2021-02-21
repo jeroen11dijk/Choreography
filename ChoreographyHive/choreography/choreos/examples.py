@@ -4,7 +4,7 @@ from typing import List
 from rlbot.utils.structures.game_data_struct import GameTickPacket
 from rlbot.utils.structures.game_interface import GameInterface
 
-from choreography.choreography import Choreography
+from choreography.choreography_main import Choreography
 from choreography.drone import Drone
 from choreography.group_step import BlindBehaviorStep, DroneListStep, PerDroneStep, StateSettingStep
 

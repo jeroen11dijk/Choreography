@@ -21,7 +21,7 @@ from rlbot.utils.structures.start_match_structures import MAX_PLAYERS
 
 import hivemind
 from queue_commands import QCommand
-from choreography.choreography import Choreography
+from choreography.choreography_main import Choreography
 
 
 # TODO:

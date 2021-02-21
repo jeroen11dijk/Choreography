@@ -5,7 +5,7 @@ from rlbot.utils.structures.game_interface import GameInterface
 from rlutilities.linear_algebra import vec3, rotation, dot, vec2, look_at, cross
 from rlutilities.simulation import Ball, Input, Curve
 
-from choreography.choreography import Choreography
+from choreography.choreography_main import Choreography
 from choreography.drone import Drone
 from choreography.group_step import BlindBehaviorStep, StateSettingStep, ParallelStep
 from choreography.paths.AirShowPath import get_paths

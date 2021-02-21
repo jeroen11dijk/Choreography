@@ -21,7 +21,7 @@ class YeetTheBallOutOfTheUniverse(StateSettingStep):
 
 class Score(StateSettingStep):
     def set_ball_state(self, ball: Ball):
-        ball.position = vec3(0, 5120, 500)
+        ball.position = vec3(0, 5120, 300)
         ball.velocity = vec3(0, 5000, 0)
         ball.angular_velocity = vec3(0, 0, 0)
 

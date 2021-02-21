@@ -12,7 +12,7 @@ from rlutilities.simulation import Curve
 
 from rlutilities.linear_algebra import vec3, dot, axis_to_rotation
 
-from choreography.paths.AirShowPath import five, three, seven
+from choreography.paths.AirShowPath import zero
 from choreography.utils.bezier import BezierPath
 
 
@@ -47,8 +47,8 @@ class BezierPathEditor:
         renderer.draw_line_3d(point + direction * 200, point - direction * 200, renderer.lime())
 
     def main(self):
-        main_path = five
-        other_path = [three, seven]
+        main_path = zero
+        other_path = []
         selected_point_index = 0
 
         while True:
@@ -115,14 +115,8 @@ class BezierPathEditor:
             # dump points into file
             elif keyboard.is_pressed("enter"):
                 with open("points.txt", "w") as file:
-                    file.write("\nTHREE\n")
-                    for point in three.points:
-                        file.write(f'vec3({int(point[0])}, {int(point[1])}, {int(point[2])}),\n')
-                    file.write("\nFIVE\n")
-                    for point in five.points:
-                        file.write(f'vec3({int(point[0])}, {int(point[1])}, {int(point[2])}),\n')
-                    file.write("\nSEVEN\n")
-                    for point in seven.points:
+                    file.write("\nZERO\n")
+                    for point in zero.points:
                         file.write(f'vec3({int(point[0])}, {int(point[1])}, {int(point[2])}),\n')
 
                 print("dumped path to points.txt")

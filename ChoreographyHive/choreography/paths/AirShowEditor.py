@@ -12,7 +12,7 @@ from rlutilities.simulation import Curve
 
 from rlutilities.linear_algebra import vec3, dot, axis_to_rotation
 
-from choreography.paths.AirShowPath import zero
+from choreography.paths.AirShowPath import one, two, three
 from choreography.utils.bezier import BezierPath
 
 
@@ -20,7 +20,7 @@ class BezierPathEditor:
     def __init__(self):
         match_config = MatchConfig()
         match_config.game_mode = 'Soccer'
-        match_config.game_map = 'Mannfield_Night'
+        match_config.game_map = 'Underpass'
         match_config.existing_match_behavior = 'Continue And Spawn'
         match_config.mutators = MutatorConfig()
         match_config.mutators.match_length = 'Unlimited'
@@ -47,8 +47,8 @@ class BezierPathEditor:
         renderer.draw_line_3d(point + direction * 200, point - direction * 200, renderer.lime())
 
     def main(self):
-        main_path = zero
-        other_path = []
+        main_path = one
+        other_path = [two, three]
         selected_point_index = 0
 
         while True:
@@ -115,8 +115,14 @@ class BezierPathEditor:
             # dump points into file
             elif keyboard.is_pressed("enter"):
                 with open("points.txt", "w") as file:
-                    file.write("\nZERO\n")
-                    for point in zero.points:
+                    file.write("\nONE\n")
+                    for point in one.points:
+                        file.write(f'vec3({int(point[0])}, {int(point[1])}, {int(point[2])}),\n')
+                    file.write("\nTWO\n")
+                    for point in two.points:
+                        file.write(f'vec3({int(point[0])}, {int(point[1])}, {int(point[2])}),\n')
+                    file.write("\nTHREE\n")
+                    for point in three.points:
                         file.write(f'vec3({int(point[0])}, {int(point[1])}, {int(point[2])}),\n')
 
                 print("dumped path to points.txt")
